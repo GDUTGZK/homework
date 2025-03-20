@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
       a {
         text-decoration: none;
         color: #000;
       }
       header {
-        width: 1910px;
+        width: 100%;
         height: 40px;
         background-color: rgba(51, 51, 51);
       }
@@ -19,6 +23,9 @@
         white-space: nowrap;
       }
       .head a {
+        margin-left: 13px;
+        font-size: 12px;
+
         color: rgba(176, 176, 176);
       }
       nav {
@@ -37,7 +44,25 @@
         margin: 0 auto;
         margin-left: 100px;
       }
-      body {
+      nav a {
+        display: inline-block;
+
+        height: 88px;
+        padding-top: 33px;
+        margin-left: 10px;
+        font-size: 15px;
+      }
+      .aone {
+        margin-left: 190px;
+      }
+      nav .search {
+        float: right;
+        width: 246px;
+        height: 50px;
+        margin-top: 25px;
+        border: 1px solid rgba(224, 224, 224);
+      }
+      .body1 {
         width: 1234px;
         margin: 0 auto;
       }
@@ -48,12 +73,15 @@
       .box1 {
         width: 234px;
         height: 460px;
+
         float: left;
         background-color: rgba(63, 61, 61);
       }
       .box1 div {
-        width: 234px;
+        width: 176px;
         height: 42px;
+        color: rgba(255, 255, 239);
+        margin: 0 auto;
       }
       .box1 div:nth-child(1) {
         margin-top: 35px;
@@ -65,8 +93,48 @@
       }
       .box2 img {
         width: 100%;
+        height: 460px;
       }
-      .footer {
+      .footer1 {
+        float: left;
+        width: 235px;
+        margin-top: 4px;
+      }
+      .footer2 {
+        float: right;
+      }
+      .footer1 img {
+        position: absolute;
+        width: 25px;
+        height: 24px;
+        top: 23px;
+        left: 26px;
+      }
+      .footer2 img {
+        width: 317px;
+        height: 170px;
+      }
+      .footer1 .sign {
+        float: left;
+        background-color: rgba(95, 87, 80);
+        width: 78px;
+        height: 87px;
+        font-size: 13px;
+        position: relative;
+      }
+      .footer1 div:nth-child(6) {
+        background-color: green;
+      }
+      .footer2 div {
+        display: inline-block;
+        margin-left: 12px;
+        margin-top: 5px;
+        background-color: black;
+      }
+      .wenzi {
+        transform: translate3d(14px, 48px, 0);
+        color: rgba(255, 255, 255);
+        width: 55px;
       }
     </style>
   </head>
@@ -93,11 +161,11 @@
     </header>
 
     <!-- ————————上面是头部 -->
-    <body>
+    <div class="body1">
       <nav>
-        <img src="/html-make/image/logo-mi2.png" alt="" />
+        <img src="/image/logo-mi2.png" alt="" />
         <div>
-          <a href="">xiaomi手机</a>
+          <a href="" class="aone">xiaomi手机</a>
           <a href="">REDMI手机</a>
           <a href="">电视</a>
           <a href="">笔记本</a>
@@ -106,6 +174,7 @@
           <a href="">路由器</a>
           <a href="">服务中心</a>
           <a href="">社区</a>
+          <input type="text" class="search" />
         </div>
       </nav>
       <!-- ————— -->
@@ -123,25 +192,43 @@
           <div>电源 配件</div>
         </div>
         <div class="box2">
-          <img src="/html-make/image/4.webp" alt="" />
+          <img src="/image/4.webp" alt="" />
         </div>
       </div>
       <!-- —————— -->
       <div class="footer">
-        <div class="fooot1">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div class="footer1">
+          <div class="sign">
+            <img src="/image/s1.png" alt="" />
+            <div class="wenzi">保障服务</div>
+          </div>
+          <div class="sign">
+            <img src="/image/s2.png" alt="" />
+            <div class="wenzi">企业团购</div>
+          </div>
+          <div class="sign">
+            <img src="/image/s3.png" alt="" />
+            <div class="wenzi">F码通道</div>
+          </div>
+          <div class="sign">
+            <img src="/image/s4.png" alt="" />
+            <div class="wenzi">米粉卡</div>
+          </div>
+          <div class="sign">
+            <img src="/image/s5.png" alt="" />
+            <div class="wenzi">以旧换新</div>
+          </div>
+          <div class="sign">
+            <img src="/image/s6.png" alt="" />
+            <div class="wenzi">话费充值</div>
+          </div>
         </div>
-        <div class="foot2">
-          <div><img src="/html-make/image/1.png" alt="" /></div>
-          <div><img src="/html-make/image/2.png" alt="" /></div>
-          <div><img src="/html-make/image/3.png" alt="" /></div>
+        <div class="footer2">
+          <div><img src="/image/1.png" alt="" /></div>
+          <div><img src="/image/2.png" alt="" /></div>
+          <div><img src="/image/3.png" alt="" /></div>
         </div>
       </div>
-    </body>
+    </div>
   </body>
 </html>
