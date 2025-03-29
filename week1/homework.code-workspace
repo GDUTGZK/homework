@@ -1,0 +1,14 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	},
+	{
+		"name": "git-demo-1",
+		"path": "../../git-demo-1"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "homework"
+  }
+}

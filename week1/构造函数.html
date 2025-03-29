@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function Star(uname, age, sex) {
+      this.name = uname;
+      this.age = age;
+      this.sex = sex;
+      this.sing = function (song) {
+        console.log(song);
+      };
+    }
+    let zjl = new Star("jsg", 30, "男");
+    for (let k in zjl) {
+      console.log(k);
+      console.log(zjl[k]);
+    }
+    let ldh = new Object();
+    ldh.nnn = "nihao";
+    console.log(ldh.nnn);
+    let zxl = {
+      uname: "张学良",
+      sex: "男",
+    };
+    console.log(zxl.uname);
+  </script>
+</html>
