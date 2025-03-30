@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function getRandom(N, M) {
+      return Math.floor(Math.random() * (M - N + 1)) + N;
+    }
+
+    let random = getRandom(0, 6);
+    let arr = ["赵云", "关羽", "张飞", "刘备", "马超", "曹操", "黄忠"];
+    document.write(arr[random]);
+    arr.splice(random, 1);
+    console.log(arr);
+  </script>
+</html>

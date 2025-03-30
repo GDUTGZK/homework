@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>请输入1到10之间的数字</p>
+    <input type="text" id="number" value="" />
+
+    <button onclick="myfunction()">提交</button>
+    <button onclick="password()" disabled>隐藏密码</button>
+    <p id="demo"></p>
+    <input type="checkbox" id="choice" />
+  </body>
+  <script>
+    function password() {
+      let ipt = document.getElementById("number");
+      if ((ipt.type = "text")) ipt.type = "password";
+      else if ((ipt.type = "password")) ipt.type = "text";
+    }
+    function myfunction() {
+      let p = document.getElementById("demo");
+      let string;
+      let ipt = document.getElementById("number");
+      let number = ipt.value;
+      ipt.value = "请输入数字";
+      console.log(number);
+      if (isNaN(number) || number < 1 || number > 10) string = "提交失败";
+      else string = "提交成功";
+      p.innerHTML = string;
+    }
+    let ipt1 = document.getElementById("choice");
+    ipt1.checked = 1;
+    ipt1.disabled = disabled;
+  </script>
+</html>
