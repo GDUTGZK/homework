@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <input type="textarea" id="comment" />
+    <div class="num">0/20字</div>
+  </body>
+  <script>
+    const input = document.querySelector("[type=textarea]");
+    input.addEventListener("input", function () {
+      const div = document.querySelector(".num");
+      div.innerHTML = `${input.value.length}/20字`;
+    });
+  </script>
+</html>

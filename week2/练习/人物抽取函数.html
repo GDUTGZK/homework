@@ -4,17 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .box {
+        margin: 0 auto;
+        width: 300px;
+        height: 300px;
+      }
+      .start {
+        width: 100px;
+        height: 30px;
+      }
+      .end {
+        margin-left: 20px;
+        width: 100px;
+        height: 30px;
+      }
+
+      .box1 {
+        overflow: hidden;
+      }
+      .title {
+        float: left;
+      }
+      .person {
+        float: left;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="box">
+      <div class="box1">
+        <div class="title">人物抽取游戏：</div>
+        <div class="person"></div>
+      </div>
+      <button class="start">开始抽取</button>
+      <button class="end">结束抽取</button>
+    </div>
+  </body>
   <script>
     function getRandom(N, M) {
       return Math.floor(Math.random() * (M - N + 1)) + N;
     }
 
-    let random = getRandom(0, 6);
+    let random;
+    let n;
+    // n用于结束定时器
     let arr = ["赵云", "关羽", "张飞", "刘备", "马超", "曹操", "黄忠"];
-    document.write(arr[random]);
-    arr.splice(random, 1);
-    console.log(arr);
+    let person = document.querySelector(".person");
+    person.innerHTML = arr[0];
+    // 引入两个按钮
+    const start = document.querySelector(".start");
+    const end = document.querySelector(".end");
+    // 1.开始抽取模块
+    start.addEventListener("click", function () {
+      n = setInterval(function () {
+        random = getRandom(0, arr.length - 1);
+        person.innerHTML = arr[random];
+      }, 100);
+    });
+    if (arr.length === 1) {
+      clearInterval(n);
+      start.disabled = 1;
+      end.disabled = true;
+    }
+    // 2.结束抽取模块
+    end.addEventListener("click", function () {
+      clearInterval(n);
+      arr.splice(random, 1);
+    });
   </script>
 </html>
