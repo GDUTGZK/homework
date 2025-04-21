@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </body>
+  <script>
+    const li4 = document.createElement("li");
+    const ul = document.querySelector("ul");
+    li4.innerHTML = "4";
+    // 加在ul所有孩子的最后面
+    ul.appendChild(li4);
+
+    //把li加在ul所有孩子的最前面
+    const li0 = document.createElement("li");
+    li0.innerHTML = "0";
+    ul.insertBefore(li0, ul.children[0]);
+  </script>
+</html>

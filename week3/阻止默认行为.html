@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <form action="https://baidu.com">
+      <input type="submit" value="提交" />
+    </form>
+    <a href="https://baidu.com">百度一下</a>
+    <script>
+      // 1.阻止a的默认行为
+      const a = document.querySelector("a");
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+      });
+      // 2.阻止form表单的提交行为
+      const form = document.querySelector("form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>

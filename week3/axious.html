@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p></p>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      const p = document.querySelector("p");
+      axios({
+        url: "http://hmajax.itheima.net/api/province",
+
+        // params: {
+        //   pname:'广东省'
+        // }
+      }).then((result) => {
+        console.log(result.data.list);
+
+        p.innerHTML = result.data.list.join("<br>");
+      });
+      // 要点总结
+      // URL是统一资源定位符，访问服务器上的资源
+      // 协议规定了传输数据的格式
+      // 域名：服务器的定位
+      //  URL查询参数
+
+      GET;
+    </script>
+  </body>
+</html>
